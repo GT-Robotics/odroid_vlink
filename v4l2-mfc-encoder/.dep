@@ -1,0 +1,10 @@
+main.o: main.c common.h args.h in_demo.h io_dev.h in_camera.h out_file.h \
+ mfc.h v4l_dev.h
+args.o: args.c common.h args.h
+in_demo.o: in_demo.c common.h in_demo.h io_dev.h func_dev.h
+out_file.o: out_file.c common.h out_file.h io_dev.h func_dev.h
+mfc.o: mfc.c common.h mfc.h io_dev.h v4l_dev.h
+io_dev.o: io_dev.c io_dev.h common.h mfc.h func_dev.h
+func_dev.o: func_dev.c io_dev.h common.h func_dev.h mfc.h
+v4l_dev.o: v4l_dev.c io_dev.h common.h v4l_dev.h mfc.h
+in_camera.o: in_camera.c common.h in_demo.h io_dev.h v4l_dev.h
